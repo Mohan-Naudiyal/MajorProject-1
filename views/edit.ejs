@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>update Listing</title>
+</head>
+<body>
+    <h2>Update Listings</h2>
+    <form action="/listings/<%= lists._id %>?_method=PUT" method="post">
+      <p>Title : <input type="text" name="listing[title]" value="<%= lists.title %>"></p><br><br>
+      <p>Description : <input type="text" name="listing[description]" value="<%= lists.description %>"></p><br><br>
+      <p>image : <input type="text" name="image/UR" value="<%= lists.image %>"></p><br><br>
+      <p>Price : <input type="number" name="listing[price]" value="<%= lists.price %>"></p><br><br>
+      <p>Location : <input type="text" name="listing[location]" value="<%= lists.location %>"></p><br><br>
+      <p>Country : <input type="text" name="listing[country]" value="<%= lists.country %>"></p><br><br>
+      <button>Submit</button>
+    </form>
+</body>
+</html>

@@ -12,6 +12,8 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "mongoose": "^8.8.3"
+    "method-override": "^3.0.0",
+    "mongoose": "^8.8.3",
+    "path": "^0.12.7"
   }
 }
