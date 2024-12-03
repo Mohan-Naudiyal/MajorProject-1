@@ -1,20 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New add</title>
-</head>
+<% layout("/layouts/boilerplate.ejs") %>
 <body>
-  <h2>Add New Things</h2>
-  <form action="/listings" method="post">
-    <p>Title : <input type="text" name="listing[title]" placeholder="Title" ></p><br><br>
-    <p>Description : <input type="text" name="listing[description]" placeholder="description"></p><br><br>
-    <p>image : <input type="text" name="image/UR" placeholder="image/URL"></p><br><br>
-    <p>Price : <input type="number" name="listing[price]" placeholder="price"></p><br><br>
-    <p>Location : <input type="text" name="listing[location]" placeholder="location"></p><br><br>
-    <p>Country : <input type="text" name="listing[country]" placeholder="country"></p><br><br>
-    <button>Submit</button>
-  </form>
+  <h2 style="text-decoration: underline black ; text-align: center;">Add New Details </h2><br><br>
+  <div class="row">
+    <div class="col-8">
+      <form action="/listings" method="post">
+        <div>
+          <label for="title" class="form-label">Title</label>
+        <input type="text" name="listing[title]" placeholder="Title" class="form-control">
+        </div>
+        <div>
+          <label for="title" class="form-label">Description</label>
+          <input type="text" name="listing[description]" placeholder="description" class="form-control">
+        </div>
+        <div>
+          <label for="title" class="form-label">Image</label>
+          <input type="text" name="listing[image][url]" placeholder="image/URL" class="form-control">
+        </div>
+        <div>
+          <label for="title" class="form-label">Image</label>
+          <input type="number" name="listing[price]" placeholder="price" class="form-control">
+        </div>
+        <div>
+          <label for="title" class="form-label">Image</label>
+          <input type="text" name="listing[location]" placeholder="location" class="form-control">
+        </div>
+        <div>
+          <label for="title" class="form-label">Image</label>
+          <input type="text" name="listing[country]" placeholder="country" class="form-control">
+        </div><br><br>
+        <button type="submit" class="btn btn-primary btn-sm">submit</button><br><br>
+      </form>
+    </div>
+  </div>
 </body>
 </html>

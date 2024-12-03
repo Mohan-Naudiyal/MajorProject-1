@@ -1,20 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>update Listing</title>
-</head>
+<% layout("/layouts/boilerplate.ejs") %>
 <body>
-    <h2>Update Listings</h2>
+    <h2 style="text-decoration: underline black; text-align: center;">Update Listings</h2><br><br>
     <form action="/listings/<%= lists._id %>?_method=PUT" method="post">
-      <p>Title : <input type="text" name="listing[title]" value="<%= lists.title %>"></p><br><br>
-      <p>Description : <input type="text" name="listing[description]" value="<%= lists.description %>"></p><br><br>
-      <p>image : <input type="text" name="image/UR" value="<%= lists.image %>"></p><br><br>
-      <p>Price : <input type="number" name="listing[price]" value="<%= lists.price %>"></p><br><br>
-      <p>Location : <input type="text" name="listing[location]" value="<%= lists.location %>"></p><br><br>
-      <p>Country : <input type="text" name="listing[country]" value="<%= lists.country %>"></p><br><br>
-      <button>Submit</button>
+      <div class="row">
+        <div class="col-8">
+          <div>
+            <label for="title" class="form-label">Title</label>
+           <input type="text" name="listing[title]" value="<%= lists.title %>" class="form-control">
+          </div>
+          <div>
+            <label for="title" class="form-label">Description</label>
+            <input type="text" name="listing[description]" value="<%= lists.description %>" class="form-control">
+          </div>
+          <div>
+            <label for="title" class="form-label">image</label>
+            <input type="text" name="image/UR" value="<%= lists.image %>" class="form-control">
+          </div>
+          <div>
+            <label for="title" class="form-label">Price</label>
+            <input type="number" name="listing[price]" value="<%= lists.price %>" class="form-control">
+          </div>
+          <div>
+            <label for="title" class="form-label">Location</label>
+            <input type="text" name="listing[location]" value="<%= lists.location %>" class="form-control">
+          </div>
+          <div>
+            <label for="title" class="form-label">Country</label>
+            <input type="text" name="listing[country]" value="<%= lists.country %>" class="form-control">
+          </div><br><br>
+          <button type="submit" class="btn btn-primary btn-sm">Submit</button><br><br>
+
+        </div>
+      </div>
     </form>
+    <br><br>
 </body>
 </html>
